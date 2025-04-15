@@ -57,5 +57,25 @@ git commit -m "完成了在本地git协作的操作文档文档"
 git push origin feat/sensor
 ~~~
 
+![image-20250416014014480](README/git.png)
 
+---
+
+接下来的操作需要在github仓库的网页完成
+
+进入仓库主页，点分支按键，可以看到自己新建的分支和最新修改的代码
+![image-20250416014310706](README/web.png)
+
+**发起 Pull Request / 合并请求**
+
+在实际开发场景下，假设你的这个分支已经完成了某一个特性的开发，接下来可以先把这部分的代码合并到main分支上。进入Pull requests标签页，点击Compare & pull request，接下来确定是自己要合并的分支没有错，简单的写一下标题和本次合并的介绍就行了。确定无误之后点击Create pull request即可。之后的步骤将会交给仓库负责人审核，审核通过后由负责人合并到main主线上。分支被合并之后将会被删除，下一次开发时重复从**同步最新代码**开始即可。
+
+![image-20250416015051792](README/PR.png)
+
+云端的分支在被合并之后会被删除，但是本地的不会，使用下面命令可以删除指定分支，将下面的分支名改成自己的即可
+
+~~~sh
+git checkout main
+git branch -d feat/sensor
+~~~
 
